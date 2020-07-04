@@ -1,0 +1,104 @@
+@import './public.scss';
+
+.m-nav{
+  float: right;
+  font-size: 12px;
+
+  & > ul > li{
+    float: left;
+    
+    & a{
+      display: inline-block;
+      padding: 12px 14px;
+    }
+
+    &.list-down{
+      position: relative;
+
+      &:hover{
+        background-color: #fff;
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+        
+        & .list-content{
+          display: block;
+        }
+
+        &.merchant > a{
+          color: $primary-color;
+        }
+      }
+
+      & .list-content{
+        display: none;
+        text-align: center;
+        z-index: 999;
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,.1);
+      }
+
+      & .list-content.merchant{
+        width: 125px;
+        right: 0;
+      }
+
+      & .list-content.nav{
+         padding: 40px;
+          width: 1190px;
+          right: 0;
+
+        & .content{
+          display: flex;
+          justify-content: space-around;
+
+          & dl{
+
+            & a{
+              padding: 7px 0;
+            }
+
+            & dt{
+              color: #666;
+              font-size: 13px;
+              margin-bottom: 20px;
+            }
+            
+            &.hotel{
+              width: 240px;
+              
+              & dd{
+                width: 80px;
+                float: left;
+
+              }
+            }
+
+            &.food{
+              width: 160px;
+              
+              & dd{
+                width: 80px;
+                float: left;
+              }
+            }
+
+            &.app{
+              width: 400px;
+              margin-left: 60px;
+              
+              & dd{
+                width: 60px;
+                float: left;
+                margin-left: 20px;
+
+                & img{
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    } 
+  }
+}

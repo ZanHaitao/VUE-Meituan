@@ -1,0 +1,46 @@
+@import './public.scss';
+
+.m-geo{
+  font-size: 12px;
+  color: #999;
+  vertical-align: middle;
+  padding: 12px 0;
+
+  & a{
+    margin: 0 4px;
+
+    &.login,
+    &.registered{
+      margin-left: 10px;
+    }
+
+    &.changeCity{
+      background: #F4F4F4;
+      border: 1px solid #E5E5E5;
+      border-radius: 2px;
+      color: #666;
+      margin: 0 4px;
+      padding: 0 2px;
+
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+
+  & .user-entry{
+    margin-left: 15px;
+
+    & .login{
+      color: $primary-color;
+    }
+  }
+
+  & div{
+    float: left;
+  }
+
+  & i{
+    color: #999;
+  }
+}
