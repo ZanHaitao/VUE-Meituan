@@ -24,7 +24,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.top-bar {
-  background-color: #f8f8f8;
-}
 </style>

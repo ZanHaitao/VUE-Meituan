@@ -9,6 +9,14 @@ const routes = [
     path: '/',
     name: 'defaultPage',
     component: defaultPage,
+    redirect: '/index',
+    children: [
+      {
+        path: '/index',
+        name: 'index',
+        component: () => import('@/page/index.vue'),
+      },
+    ],
   },
   {
     path: '/blank',
