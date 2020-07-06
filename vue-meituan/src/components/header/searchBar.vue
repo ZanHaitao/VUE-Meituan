@@ -1,12 +1,12 @@
 <template>
   <div class="search">
     <el-row class="utils-wrap" type="flex">
-      <el-col :span="4" class="search-logo">
+      <el-col :span="7" class="search-logo">
         <a href="//bj.meituan.com">
           <img src="//s0.meituan.net/bs/fe-web-meituan/fa5f0f0/img/logo.png" alt="美团" />
         </a>
       </el-col>
-      <el-col :span="20" class="search-content">
+      <el-col :span="17" class="search-content">
         <el-row class="search-input" type="flex">
           <el-input
             v-model="searchInput"

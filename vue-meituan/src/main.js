@@ -6,6 +6,7 @@ import router from './router/router';
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/assets/css/reset.css';
 import '@/assets/css/utils.css';
+import '@/assets/css/font.css';
 
 Vue.use(Element);
 

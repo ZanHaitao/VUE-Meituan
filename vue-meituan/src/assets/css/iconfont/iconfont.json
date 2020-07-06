@@ -1,0 +1,30 @@
+{
+  "id": "1926065",
+  "name": "美团",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2170610",
+      "name": "外卖-1",
+      "font_class": "waimai-",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "7843634",
+      "name": "美食",
+      "font_class": "fenzu",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "13608499",
+      "name": "酒店",
+      "font_class": "jiudian",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    }
+  ]
+}

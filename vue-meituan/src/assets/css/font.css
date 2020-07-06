@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 1926065 */
+  src: url('./iconfont/iconfont.eot');
+  src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('./iconfont/iconfont.woff2') format('woff2'),
+  url('./iconfont/iconfont.woff') format('woff'),
+  url('./iconfont/iconfont.ttf') format('truetype'),
+  url('./iconfont/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: iconfont;
+  font-style: normal;
+}
+
+.iconfont.food::before{
+  content: '\e61c';
+  color: orange;
+  font-size: 18px;
+}
+
+.iconfont.takeout::before{
+  content: '\e607';
+  color: #FFB500;
+  font-size: 16px;
+}
+
+.iconfont.hotel::before{
+  content: '\e611';
+  color: brown;
+  font-size: 16px;
+}
