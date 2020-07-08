@@ -64,7 +64,7 @@
           </li>
         </ul>
       </li>
-      <li class="list-down">
+      <li class="list-down merchant">
         <a>网站导航</a>
         <div class="list-content nav">
           <div class="content">

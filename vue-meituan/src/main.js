@@ -12,6 +12,16 @@ Vue.use(Element);
 
 Vue.config.productionTip = false;
 
+Vue.directive('show-selector-list', {
+  bind(el, binding) {
+    const { value } = binding;
+
+    document.addEventListener('click', () => {
+      value();
+    });
+  },
+});
+
 new Vue({
   render: (h) => h(App),
   store,

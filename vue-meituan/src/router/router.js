@@ -16,6 +16,11 @@ const routes = [
         name: 'index',
         component: () => import('@/page/index.vue'),
       },
+      {
+        path: '/changecity',
+        name: 'changeCity',
+        component: () => import('@/page/changeCity.vue'),
+      },
     ],
   },
   {

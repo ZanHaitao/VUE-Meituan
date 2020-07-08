@@ -1,0 +1,22 @@
+.city-list{
+
+  dt {
+    font-size: 16px;
+    font-weight: 500;
+    display: inline-block;
+    width: 80px;
+    color: #333;
+    vertical-align: middle;
+  }
+  dd{
+    display: inline-block;
+    margin: 0 20px;
+    font-size: 14px;
+    color: #666;
+
+    cursor: pointer;
+    &:hover{
+      color: #222;
+    }
+  }
+}

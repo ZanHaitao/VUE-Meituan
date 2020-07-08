@@ -1,0 +1,31 @@
+.search{
+  padding-bottom: 0 !important;
+}
+
+.page-city{
+  background-color: #fff;
+  padding: 0 20px;
+  margin: 20px auto;
+  box-sizing: border-box;
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+
+  & > .el-row{
+    border-bottom: 1px solid #E5E5E5;
+    padding: 30px 0;
+
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+  .title-search{
+    margin-left: 20px;
+  }
+
+  .el-select{
+    margin-left: 20px;
+  }
+
+  
+}
