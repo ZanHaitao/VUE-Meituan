@@ -1,0 +1,15 @@
+.filter-box{
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  padding: 0 20px;
+
+  .selector-wrap{
+    &:last-child{
+      dd{
+        border-bottom: none;
+      }
+    }
+  }
+}

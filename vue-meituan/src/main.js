@@ -22,6 +22,21 @@ Vue.directive('show-selector-list', {
   },
 });
 
+Vue.directive('fixed', {
+  bind(el, bindin, vnode) {
+    const { elm } = vnode;
+    window.onscroll = () => {
+      const { scrollTop } = document.documentElement;
+      if (scrollTop > 215) {
+        elm.style.position = 'fixed';
+        elm.style.top = '0';
+      } else {
+        elm.style.position = 'relative';
+      }
+    };
+  },
+});
+
 new Vue({
   render: (h) => h(App),
   store,

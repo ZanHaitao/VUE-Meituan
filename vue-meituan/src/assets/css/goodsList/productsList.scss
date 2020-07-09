@@ -1,0 +1,21 @@
+.products-list{
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  margin-top: 10px;
+
+  .sort-option{
+    overflow: hidden;
+    padding-bottom: 20px;
+    li{
+      float: left;
+      font-size: 13px;
+      margin-right: 40px;
+      cursor: pointer;
+      color: #666;
+      &.active{
+        color: #222;
+      }
+    }
+  }
+}

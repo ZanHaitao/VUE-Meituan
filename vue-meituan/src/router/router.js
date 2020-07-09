@@ -21,6 +21,11 @@ const routes = [
         name: 'changeCity',
         component: () => import('@/page/changeCity.vue'),
       },
+      {
+        path: '/goodslist/:name',
+        name: 'goodslist',
+        component: () => import('@/page/goodsList.vue'),
+      },
     ],
   },
   {

@@ -1,0 +1,112 @@
+.selector-wrap{
+  margin: 20px 0;
+  dt{
+    width: 80px;
+    height: 28px;
+    line-height: 28px;
+    float: left;
+    font-size: 15px;
+    a{
+      color: #222;
+    }
+    span{
+      display: inline-block;
+      padding: 0 10px;
+      &.active{
+        background-color: #FFBD00;
+        border-radius: 14px;
+      }
+    }
+    
+  }
+  dd{
+    width: 730px;
+    float: left;
+    margin-left: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 10px;
+
+    a{
+      color: #666;
+      padding: 5px 10px;
+      &.active{
+        background-color: #FFBD00;
+        border-radius: 14px;
+        color: #222;
+      }
+
+      i{
+        margin-left: 5px;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: 120px;
+        height: 28px;
+        line-height: 28px;
+        position: relative;
+        color: #666;
+
+        &:hover{
+          .list-down{
+            display: block;
+          }
+        }
+
+        .list-down{
+          z-index: 999;
+          display: none;
+          position: absolute;
+          border-radius: 5px;
+          border: 1px solid #e5e5e5;
+          padding: 15px;
+          background-color: #fff;
+          box-shadow: 0px 2px 5px rgba(0,0,0,.1);
+
+          &::before,
+          &::after{
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            position: absolute;
+            left: 15px;
+          }
+
+          &::before{
+            border-bottom-color: #e5e5e5;
+            top: -12px;
+          }
+
+          &::after{
+            border-bottom-color: #fff;
+            top: -10.5px;
+          }
+
+          h4{
+            font-size: 16px;
+            color: #CCCCCC;
+          }
+
+          & > div{
+            display: flex;
+            flex-wrap: wrap;
+
+            span{
+              display: inline-block;
+              width: 120px;
+              font-size: 12px;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}
