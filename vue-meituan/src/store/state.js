@@ -17,8 +17,8 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    setChangePostiton({ commit }, val) {
-      commit.changePosition(val);
+    setChangePostiton(context, val) {
+      context.commit('changePosition', val);
     },
   },
 });

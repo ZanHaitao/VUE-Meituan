@@ -13,14 +13,14 @@
             placeholder="搜索商家或地点"
             @focus="handleFocus"
             @blur="handleBlur"
+            @input="changeInput"
           ></el-input>
           <el-button type="primary" icon="el-icon-search"></el-button>
-
           <div class="search-list" v-if="showSearchList">
             <div class="hot-word" v-if="showHotList">
               <dl>
-                <dd>热门搜索</dd>
-                <dt>
+                <dt>热门搜索</dt>
+                <dd>
                   <span
                     v-for="(item, index) in hotSearchList"
                     :key="index"
@@ -32,10 +32,11 @@
                       params:{ name:item } }"
                     >{{ item }}</router-link>
                   </span>
-                </dt>
+                </dd>
               </dl>
             </div>
             <div class="search-keyword" v-if="showKeyWord">
+              <div v-if="searchListData.length === 0">暂无数据</div>
               <ul>
                 <li v-for="(item, index) in searchListData" @click="handleClick(item)" :key="index">
                   <router-link
@@ -69,16 +70,15 @@ export default {
   data() {
     return {
       searchInput: '',
-      hotSearchList: [
-        '三亚旅游',
-        '五星级酒店',
-        '驴肉火烧',
-        '京城第一火锅',
-        '一起去旅行',
-      ],
-      searchListData: ['火锅', '麻辣火锅', '海底捞', '小龙坎', '牛奶火锅'],
+      hotSearchList: [],
+      searchListData: [],
       showSearchList: false,
     };
+  },
+  created() {
+    this.$api.searchHotWords().then((res) => {
+      this.hotSearchList = res;
+    });
   },
   computed: {
     showHotList() {
@@ -100,6 +100,11 @@ export default {
     handleClick(val) {
       console.log('aa');
       this.searchInput = val;
+    },
+    changeInput() {
+      this.$api.getSearchList().then((res) => {
+        this.searchListData = res.list.filter((item) => item.includes(this.searchInput));
+      });
     },
   },
 };

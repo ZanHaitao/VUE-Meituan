@@ -3,6 +3,7 @@
   position: relative;
   margin: 0 10px 0 20px;
 
+  
 
   .selector-container{
     width: 150px;
@@ -16,6 +17,10 @@
     padding: 0 10px;
     font-size: 14px;
     color: #666;
+
+    &.disabled{
+      cursor: not-allowed;
+    }
 
     i{
       margin-left: 80px;

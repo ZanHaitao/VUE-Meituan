@@ -30,39 +30,13 @@ export default {
   data() {
     return {
       showMenu: null,
-      menuListData: [
-        {
-          type: 'food',
-          name: '美食',
-          items: [
-            {
-              title: '美食',
-              items: ['代金券', '甜点饮品', '火锅', '自助餐', '小吃快餐'],
-            },
-          ],
-        },
-        {
-          type: 'takeout',
-          name: '外卖',
-          items: [
-            {
-              title: '外卖',
-              items: ['美团外卖'],
-            },
-          ],
-        },
-        {
-          type: 'hotel',
-          name: '酒店',
-          items: [
-            {
-              title: '酒店星级',
-              items: ['经济型', '舒适/三星', '高档/四星', '豪华/五星'],
-            },
-          ],
-        },
-      ],
+      menuListData: [],
     };
+  },
+  created() {
+    this.$api.getNavList().then((res) => {
+      this.menuListData = res;
+    });
   },
   methods: {
     menuEnter(item) {

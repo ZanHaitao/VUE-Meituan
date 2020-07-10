@@ -1,6 +1,6 @@
 <template>
   <div class="selector" v-show-selector-list="documentClick">
-    <div class="selector-container" @click="handleClick">
+    <div :class="['selector-container',disabled ? 'disabled' : '']" @click="handleClick">
       <span>{{ value }}</span>
       <i class="el-icon-caret-bottom"></i>
     </div>
@@ -41,6 +41,7 @@ export default {
       type: Boolean,
       required: true,
     },
+    disabled: Boolean,
   },
   data() {
     return {};
@@ -53,7 +54,9 @@ export default {
   methods: {
     handleClick(e) {
       e.stopPropagation();
-      this.$emit('showListContent', true);
+      if (!this.disabled) {
+        this.$emit('showListContent', true);
+      }
     },
     documentClick() {
       this.$emit('showListContent', false);

@@ -46,13 +46,14 @@
         box-shadow: 0 2px 5px rgba(0,0,0,.1);
 
         & .hot-word{
-          dd{
+          dt{
             font-size: 13px;
-            margin: 0 10px 15px;
+            margin: 0 10px 15px 0px;
           }
           
           dl span{
-            margin:0 10px;
+            display: inline-block;
+            margin:5px 10px 5px 0;
           }
         }
 

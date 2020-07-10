@@ -139,6 +139,11 @@ export default {
       ],
     };
   },
+  created() {
+    // this.$api.resultsByKeywords().then((res) => {
+    //   console.log(res);
+    // });
+  },
   methods: {
     changeActive(e) {
       const { type } = e.target.dataset;

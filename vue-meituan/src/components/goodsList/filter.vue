@@ -14,28 +14,7 @@ export default {
   },
   data() {
     return {
-      typeList: [
-        {
-          title: '美食',
-          type: 'food',
-          subList: [
-            {
-              name: '日本菜',
-              id: 'Japan',
-            },
-          ],
-        },
-        {
-          title: '酒店住宿',
-          type: 'hotal',
-          subList: [
-            {
-              name: '温泉酒店',
-              id: 'hot_spring',
-            },
-          ],
-        },
-      ],
+      typeList: [],
       positionList: [
         {
           title: '推荐商圈',
@@ -50,8 +29,42 @@ export default {
             },
           ],
         },
+        {
+          title: '南岗区',
+          subList: [
+            {
+              name: '中央大街',
+              id: 123,
+            },
+            {
+              name: '西客站',
+              id: 11,
+            },
+            {
+              name: '花园街',
+              id: 222,
+            },
+            {
+              name: '通乡街/果园街',
+              id: 21,
+            },
+            {
+              name: '爱建社区',
+              id: 1,
+            },
+            {
+              name: '学府路',
+              id: 34,
+            },
+          ],
+        },
       ],
     };
+  },
+  created() {
+    this.$api.getClassify().then((res) => {
+      this.typeList = res;
+    });
   },
 };
 </script>

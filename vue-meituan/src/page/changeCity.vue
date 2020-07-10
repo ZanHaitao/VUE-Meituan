@@ -26,22 +26,17 @@ export default {
     HotCity,
     RecentCity,
   },
+  created() {
+    this.$api.getHotCityList().then((res) => {
+      this.hotCityList = res.map((item) => item.name);
+    });
+    this.$api.getHistoryCityList().then((res) => {
+      this.historyCityList = res.map((item) => item.name);
+    });
+  },
   data() {
     return {
-      hotCityList: [
-        '临汾',
-        '吕梁',
-        '侯马',
-        '永济',
-        '河津',
-        '高平',
-        '孝义',
-        '介休',
-        '原平',
-        '霍州',
-        '汾阳',
-        '古交',
-      ],
+      hotCityList: [],
       historyCityList: ['太原', '大同', '阳泉', '长治', '晋城', '朔州'],
     };
   },

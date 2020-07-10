@@ -2,12 +2,10 @@
   <div class="m-geo clearfix">
     <div class="position">
       <i class="el-icon-location" />
-      <span>北京</span>
+      <span>{{ $store.state.position }}</span>
       <router-link :class="'changeCity'" :to="{name:'changeCity'}">切换城市</router-link>
       <span>[</span>
-      <a href="#">门头沟区</a>
-      <a href="#">大厂回族自治县</a>
-      <a href="#">廊坊</a>
+      <a href="#" v-for="item in nearCityList" :key="item.id">{{ item.name }}</a>
       <span>]</span>
     </div>
     <div class="user-entry">
@@ -18,7 +16,19 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      nearCityList: [],
+    };
+  },
+  created() {
+    this.$api.getPosition().then((res) => {
+      this.$store.dispatch('setChangePostiton', res.name);
+      this.nearCityList = res.nearCity;
+    });
+  },
+};
 </script>
 
 <style lang="scss" scoped>

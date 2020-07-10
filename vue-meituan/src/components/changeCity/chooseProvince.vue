@@ -16,6 +16,7 @@
       :showList="showCityList"
       :listData="cityListData"
       @showListContent="changeCityShowList"
+      :disabled="isDisabled"
     />
     <span class="title-search">直接搜索:</span>
     <el-select
@@ -47,94 +48,43 @@ export default {
       showCityList: false,
       city: '',
       loading: false,
-      provinceListData: [
-        '山东',
-        '甘肃',
-        '江苏',
-        '北京',
-        '云南',
-        '海南',
-        '浙江',
-        '上海',
-        '天津',
-        '陕西',
-        '新疆',
-        '贵州',
-        '安徽',
-        '澳门',
-        '湖南',
-        '河北',
-        '香港',
-        '辽宁',
-        '四川',
-        '宁夏',
-        '吉林',
-        '福建',
-        '湖北',
-        '广东',
-        '重庆',
-        '山西',
-        '江西',
-        '黑龙江',
-        '青海',
-        '河南',
-        '台湾',
-        '内蒙古',
-        '西藏',
-        '广西',
-      ],
-      cityListData: [
-        '太原',
-        '大同',
-        '阳泉',
-        '长治',
-        '晋城',
-        '朔州',
-        '晋中',
-        '运城',
-        '忻州',
-        '临汾',
-        '吕梁',
-        '侯马',
-        '永济',
-        '河津',
-        '高平',
-        '孝义',
-        '介休',
-        '原平',
-        '霍州',
-        '汾阳',
-        '古交',
-        '阳城',
-        '襄垣',
-        '灵石',
-        '太谷区',
-        '怀仁市',
-        '洪洞',
-        '临猗',
-        '陵川',
-        '平遥',
-        '万荣',
-        '灵丘县',
-        '繁峙县',
-        '应县',
-        '平陆县',
-        '祁县',
-        '盂县',
-        '清徐',
-      ],
       listData: [],
+      provinceList: [],
+      cityInfoList: [],
+      isDisabled: true,
     };
+  },
+  created() {
+    this.$api.getProvinceList().then((res) => {
+      this.provinceList = res;
+    });
+  },
+  computed: {
+    provinceListData() {
+      return this.provinceList.map((item) => item.provinceName);
+    },
+    cityListData() {
+      return this.cityInfoList.map((item) => item.name);
+    },
   },
   methods: {
     remoteMethod(val) {
       this.listData = this.cityListData.filter((item) => item.includes(val));
     },
     changeProvince(val) {
+      this.isDisabled = false;
+      this.currCity = '城市';
+      this.provinceList.forEach((item) => {
+        if (item.provinceName === val) {
+          this.cityInfoList = item.cityInfoList;
+        }
+      });
       this.currProvince = val;
     },
     changeCity(val) {
       this.currCity = val;
+      this.$store.dispatch('setChangePostiton', val);
+      this.$router.push('/');
     },
     changeProvinceShowList(flag) {
       if (flag) {

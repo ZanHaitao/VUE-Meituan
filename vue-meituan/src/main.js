@@ -3,12 +3,15 @@ import Element from 'element-ui';
 import App from './App.vue';
 import store from './store/state';
 import router from './router/router';
+import api from './api/index';
 import 'element-ui/lib/theme-chalk/index.css';
 import '@/assets/css/reset.css';
 import '@/assets/css/utils.css';
 import '@/assets/css/font.css';
 
 Vue.use(Element);
+
+Vue.prototype.$api = api;
 
 Vue.config.productionTip = false;
 
