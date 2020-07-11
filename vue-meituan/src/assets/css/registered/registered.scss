@@ -1,0 +1,129 @@
+.registered{
+  height: 100vh;
+  background-color: #fff;
+  .utils-wrap{
+    width: 980px;
+  }
+  header{
+    border-bottom: 2px solid #D8D8D8;
+    color: #666;
+    padding: 10px 0;
+    font-size: 14px;
+    
+    .utils-wrap{
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .logo{
+      a{
+        display: inline-block;
+        width: 128px;
+        height: 36px;
+        background: url(http://s0.meituan.net/bs/fe-web-meituan/fa5f0f0/img/logo.png) no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .login{
+      .el-button{
+        background-color: #FFBD00 ;
+        color: #000;
+        font-size: 12px;
+        width: 50px;
+        height: 25px;
+        padding: 0;
+        border: none;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  main{
+    padding: 30px 0;
+
+    .el-input{
+      width: 260px;
+    }
+
+    .password{
+      margin-bottom: 10px;
+    }
+
+    .el-form-item__error{
+      top:10px;
+      left: 270px;
+    }
+
+    .el-button{
+      background-color: #FFBD00 ;
+      color: #000;
+      font-weight: bold;
+      border: none;
+    }
+
+    p{
+      padding-left: 100px;
+      span{
+        color: #FE8C00;
+        font-size: 13px;
+        cursor: pointer;
+      }
+    }
+
+    .checkBox{
+      margin: 10px 0;
+      width: 260px;
+      height: 20px;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      background-color: #EEEEEE;
+
+      .bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        width: 0;
+        height: 20px;
+        background-color: #d3ebee;
+        transition: all .5s linear;
+
+        &.week{
+          width: 33%;
+          background: #f76120;
+        }
+        &.normal{
+          width: 66%;
+          background: #ff8900;
+        }
+        &.strong {
+          width: 100%;
+          background: #5bab3c;
+        }
+      } 
+      span{
+        position: relative;
+        z-index: 9999;
+        width: 85px;
+        border-right: 1px solid #fff;
+        border-left: 1px solid #fff;
+        height: 20px;
+        font-size: 12px;
+        color: #fff;
+        line-height: 20px;
+        text-align: center;
+        display: inline-block;
+      }
+    }
+  }
+
+  footer{
+    border-top: 1px solid rgba(0,0,0,.1);
+    color: #666;
+    padding: 30px 0;
+    font-size: 14px;
+    text-align: center;
+  }
+}

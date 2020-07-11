@@ -15,6 +15,10 @@ axios.interceptors.response.use((response) => {
   if (response.status === 200) {
     if (response.config.url === '/api/meituan/list/areaList.json') {
       return response.data;
+    } if (response.config.url === '/api/meituan/register') {
+      return response.data;
+    } if (response.config.url === '/api/meituan/login') {
+      return response.data;
     }
     return response.data.data;
   }

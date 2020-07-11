@@ -14,7 +14,9 @@
           <span :id="'City-'+key">{{ key }}</span>
         </div>
         <div class="content">
-          <span @click="handleClick(item.name)" v-for="item in value" :key="item.id">{{ item.name }}</span>
+          <span @click="handleClick(item.name)" v-for="item in value" :key="item.id">
+            <span>{{ item.name }}</span>
+          </span>
         </div>
       </div>
     </div>

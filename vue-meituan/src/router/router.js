@@ -32,6 +32,18 @@ const routes = [
     path: '/blank',
     name: 'blankPage',
     component: () => import('@/layout/blank.vue'),
+    children: [
+      {
+        path: 'login',
+        name: 'login',
+        component: () => import('@/layout/login.vue'),
+      },
+      {
+        path: 'registered',
+        name: 'registered',
+        component: () => import('@/layout/registered.vue'),
+      },
+    ],
   },
 ];
 

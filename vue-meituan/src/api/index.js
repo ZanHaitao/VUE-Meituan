@@ -49,4 +49,17 @@ export default {
   getPosition() {
     return axios.get('/api/meituan/city/getPosition.json');
   },
+  // 注册用户
+  setRegister(params) {
+    console.log(params);
+    return axios.get('/api/meituan/register', {
+      params,
+    });
+  },
+  // 用户登陆
+  setLogin(params) {
+    return axios.get('/api/meituan/login', {
+      params,
+    });
+  },
 };

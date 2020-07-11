@@ -1,0 +1,167 @@
+.login{
+  background-color: #fff;
+  height: 100vh;
+
+  .utils-wrap{
+    width: 980px;
+  }
+
+  header{
+    .logo{
+      padding: 40px 0 30px;
+       a{
+      display: block;
+      width: 82px;
+      height: 54px;
+      background-position: -188px -808px;
+      background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-normal.2ee5c09.png);
+      background-repeat: no-repeat;
+      background-size: initial;
+      overflow: hidden;
+    }
+    }
+   
+  }
+
+  main{
+    .login-banner{
+      float: left;
+    }
+    .form{
+      float: right;
+      width: 270px;
+      margin-right: 110px;
+      position: relative;
+      padding-top: 60px;
+      .prompt{
+        position: absolute;
+        background-color: #fff6db;
+        border: 2px solid #f5d8a7;
+        padding: 10px;
+        box-sizing: border-box;
+        width: 270px;
+        top: 0;
+        left: 0;
+        font-size: 12px;
+        color: #666;
+        i{
+          color: #FFBD00;
+          margin-right: 10px;
+          font-size: 18px;
+          vertical-align: middle;
+        }
+        span{
+          vertical-align: middle;
+        }
+      }
+
+      &-title{
+        font-size: 14px;
+        color: #666;
+
+        span:last-child{
+          font-size: 12px;
+          cursor: pointer;
+          float: right;
+        }
+      }
+      .el-input{
+        margin: 8px 0;
+
+        .el-input__inner:focus{
+          border-color: #FFBD00 ;
+        }
+      }
+
+      .back-pwd{
+        font-size: 12px;
+        color: #FFBD00;
+        cursor: pointer;
+        span{
+          float: right;
+        }
+      }
+
+      .el-button{
+        width: 100%;
+        margin: 10px 0;
+        background-color: #FFBD00;
+        color: #000;
+        font-weight: bold;
+      }
+
+      .login-registered{
+        font-size: 14px;
+        color: #666;
+
+        a{
+          color: #FFBD00;
+          margin-left: 5px;
+        }
+      }
+
+      .firend{
+        position: relative;
+        border-top: 1px solid rgba(0,0,0,.1);
+        padding: 20px 0;
+        margin-top: 20px;
+        text-align: center;
+
+        &::before{
+          content: '用合作网站账号登陆';
+          display: block;
+          position: absolute;
+          top: -8px;
+          left: 50%;
+          font-size: 12px;
+          background-color: #fff;
+          width: 150px;
+          transform: translateX(-50%);
+        }
+
+        .qq,.xl{
+          width: 18px;
+          height: 18px;
+          display: inline-block;
+          margin: 0 10px;
+          cursor: pointer;
+        }
+        .qq{
+          background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-normal.2ee5c09.png);
+          background-position: -1250px -491px;
+        }
+        .xl{
+          background-image: url(//s0.meituan.net/bs/file/?f=fe-sso-fs:build/assets/sp-normal.2ee5c09.png);
+          background-position: -1250px -599px;
+        }
+      }
+    }
+  }
+
+  footer{
+    color: #999;
+    font-size: 12px;
+    margin-top: 40px;
+
+    ul{
+      border-top: 1px solid rgba(0,0,0,.1);
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      padding: 20px 0;
+
+      li{
+        float: left;
+        padding: 0 20px;
+        cursor: pointer;
+        border-right: 1px solid rgba(0,0,0,.1);
+        &:last-child{
+          border: none;
+        }
+      }
+    }
+
+    p{
+      padding: 30px 0 0 20px;
+    }
+
+  }
+}

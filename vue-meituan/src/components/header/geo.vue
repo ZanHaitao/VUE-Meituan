@@ -8,9 +8,13 @@
       <a href="#" v-for="item in nearCityList" :key="item.id">{{ item.name }}</a>
       <span>]</span>
     </div>
-    <div class="user-entry">
+    <div class="user-entry" v-if="!$store.state.userName">
       <router-link :class="'login'" :to="{name:'login'}">立即登陆</router-link>
       <router-link :class="'registered'" :to="{name:'registered'}">注册</router-link>
+    </div>
+    <div class="user-login" v-else>
+      <span>{{ $store.state.userName }}</span>
+      <span @click="handleClick">退出</span>
     </div>
   </div>
 </template>
@@ -27,6 +31,15 @@ export default {
       this.$store.dispatch('setChangePostiton', res.name);
       this.nearCityList = res.nearCity;
     });
+  },
+  methods: {
+    handleClick() {
+      alert('退出成功');
+      setTimeout(() => {
+        this.$store.dispatch('setMutationUserName', '');
+        this.$router.push({ name: 'login' });
+      }, 200);
+    },
   },
 };
 </script>

@@ -15,18 +15,26 @@
       <el-col :span="6">
         <div class="login-container">
           <div class="portrait">
-            <img src="//s0.meituan.net/bs/fe-web-meituan/e350c4a/img/avatar.jpg" alt />
+            <img
+              v-if="!$store.state.userName"
+              src="//s0.meituan.net/bs/fe-web-meituan/e350c4a/img/avatar.jpg"
+              alt
+            />
+            <img v-else src="//s0.meituan.net/bs/fe-web-meituan/e3064a3/img/head-img.png" alt />
           </div>
-          <p>Hi！你好</p>
-          <p>
+          <p>{{$store.state.userName === '' ? 'Hi！你好' : $store.state.userName}}</p>
+          <p v-if="!$store.state.userName">
             <router-link :to="{name:'registered'}">
               <el-button round>注册</el-button>
             </router-link>
           </p>
-          <p>
+          <p v-if="!$store.state.userName">
             <router-link :to="{name:'login'}">
               <el-button round>立即登录</el-button>
             </router-link>
+          </p>
+          <p class="list" v-if="$store.state.userName">
+            <img src="https://s1.ax1x.com/2020/07/11/UQXwhF.png" />
           </p>
         </div>
       </el-col>
