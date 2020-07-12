@@ -1,0 +1,45 @@
+.recommend-menu{
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 30px;
+  margin-bottom: 40px;
+
+  .menu-image{
+    display: flex;
+    justify-content: space-between;
+    li{
+      width: 130px;
+      height: 130px;
+      position: relative;
+      cursor: pointer;
+
+      img{
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+      }
+
+      .title{
+        position: absolute;
+        bottom: 0px;
+        background-color: rgba(0,0,0,.3);
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
+        color: #fff;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .menu-list{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    li{
+      padding: 10px 10px;
+      color: #333;
+    }
+  }
+}

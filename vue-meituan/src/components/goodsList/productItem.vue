@@ -2,15 +2,18 @@
   <div class="product-item">
     <div class="left-content">
       <div class="image-wrap">
-        <a href="#">
+        <router-link :to="{name:'detail',params:{name:productData.title}}">
           <img :src="productData.image" alt />
-        </a>
+        </router-link>
         <span>{{ num }}</span>
       </div>
     </div>
     <div class="right-content">
       <div class="info">
-        <h4>{{ productData.title }}</h4>
+        <router-link
+          tag="h4"
+          :to="{name:'detail',params:{name:productData.title}}"
+        >{{ productData.title }}</router-link>
         <p class="comment-content">
           <el-rate v-model="productData.score" disabled></el-rate>
           <span v-if="productData.score > 4.5">很好</span>

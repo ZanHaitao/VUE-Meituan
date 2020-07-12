@@ -3,14 +3,14 @@
     <dl>
       <dt>{{ title }}</dt>
       <dt>
-        <a href="javascript:vold(0)">
+        <a href="javascript:void(0)">
           <span @click="handleClick('全部')" :class="{'active':active === '全部'}">全部</span>
         </a>
       </dt>
       <dd>
         <ul>
           <li v-for="(item,index) in dataList" :key="index">
-            <a href="javascript:vold(0)" :class="{'active':active === item.title}">
+            <a href="javascript:void(0)" :class="{'active':active === item.title}">
               <span>{{ item.title }}</span>
               <i class="el-icon-caret-bottom"></i>
             </a>

@@ -3,7 +3,7 @@
     <el-row>
       <el-breadcrumb separator-class="el-icon-arrow-right">
         <el-breadcrumb-item>
-          <a href="/">{{ $store.state.position }}美团</a>
+          <router-link to="/">{{ $store.state.position }}美团</router-link>
         </el-breadcrumb-item>
         <el-breadcrumb-item>{{ $store.state.position }}{{ $route.params.name }}</el-breadcrumb-item>
       </el-breadcrumb>
@@ -18,9 +18,11 @@
         </el-row>
       </el-col>
       <el-col :span="5">
-        <div class="map" v-fixed></div>
+        <div class="map">
+          <div class="map-wrap" v-fixed></div>
+        </div>
         <div class="isLike">
-          <h4>猜你喜欢</h4>
+          <is-like />
         </div>
       </el-col>
     </el-row>
@@ -30,11 +32,13 @@
 <script>
 import MyFilter from '../components/goodsList/filter.vue';
 import ProductsList from '../components/goodsList/productsList.vue';
+import IsLike from '../components/goodsList/isLike.vue';
 
 export default {
   components: {
     MyFilter,
     ProductsList,
+    IsLike,
   },
 };
 </script>

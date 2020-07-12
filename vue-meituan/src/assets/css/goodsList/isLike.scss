@@ -1,0 +1,45 @@
+.is-like{
+  width: 230px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+h4{
+  padding-left: 10px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.like-list{
+  padding: 0 10px;
+
+  li{
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  img{
+    width: 190px;
+    border-radius: 5px;
+  }
+  .title{
+    font-size: 14px;
+    margin: 10px 0 5px;
+  }
+  .address{
+    font-size: 13px;
+    color: #999;
+  }
+  .price{
+    margin-top: 10px;
+    span{
+      color: #f60;
+      font-size: 12px;
+      &:last-child{
+        font-size: 20px;
+      }
+    }
+  }
+}

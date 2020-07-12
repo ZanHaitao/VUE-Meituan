@@ -12,19 +12,24 @@ const routes = [
     redirect: '/index',
     children: [
       {
-        path: '/index',
+        path: 'index',
         name: 'index',
         component: () => import('@/page/index.vue'),
       },
       {
-        path: '/changecity',
+        path: 'changecity',
         name: 'changeCity',
         component: () => import('@/page/changeCity.vue'),
       },
       {
-        path: '/goodslist/:name',
+        path: 'goodslist/:name',
         name: 'goodslist',
         component: () => import('@/page/goodsList.vue'),
+      },
+      {
+        path: 'detail/:name',
+        name: 'detail',
+        component: () => import('@/page/detail.vue'),
       },
     ],
   },
@@ -47,7 +52,9 @@ const routes = [
   },
 ];
 
-export default new VueRouter({
+const router = new VueRouter({
   mode: 'history',
   routes,
 });
+
+export default router;

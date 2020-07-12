@@ -1,0 +1,41 @@
+.page-detail{
+  margin: 30px auto;
+
+  .el-breadcrumb{
+    font-size: 12px;
+    margin-bottom: 20px;
+
+    .el-breadcrumb__inner a{
+      font-weight: normal;
+      color: #606266;
+      &:hover{
+        color: #FFBD00;
+      }
+    }
+  }
+
+  .detail-content{
+    margin-top: 40px;
+
+    .detail-content-left{
+      float: left;
+
+      h3{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 26px;
+        margin-bottom: 8px;
+      }
+    }
+    
+    
+    .detail-content-right{
+      float: right;
+
+      .isLike{
+        margin-left: 20px;
+        margin-top: 35px;
+      }
+    }
+  }
+}

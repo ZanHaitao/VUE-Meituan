@@ -2,9 +2,9 @@
   <div class="search">
     <el-row class="utils-wrap" type="flex">
       <el-col :span="7" class="search-logo">
-        <a href="/">
+        <router-link to="/">
           <img src="//s0.meituan.net/bs/fe-web-meituan/fa5f0f0/img/logo.png" alt="美团" />
-        </a>
+        </router-link>
       </el-col>
       <el-col :span="17" class="search-content">
         <el-row class="search-input" type="flex">
@@ -98,7 +98,6 @@ export default {
       }, 200);
     },
     handleClick(val) {
-      console.log('aa');
       this.searchInput = val;
     },
     changeInput() {

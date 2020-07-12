@@ -32,7 +32,13 @@ export default {
   },
   created() {
     this.$api.getGoodsList().then((res) => {
-      this.productList = res;
+      const list = [];
+      for (let i = 0; i < 5; i += 1) {
+        res.forEach((item) => {
+          list.push(item);
+        });
+      }
+      this.productList = list;
     });
   },
   components: {

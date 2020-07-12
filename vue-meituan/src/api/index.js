@@ -62,4 +62,8 @@ export default {
       params,
     });
   },
+  // 获取猜你喜欢列表
+  getRecommend() {
+    return axios.get('/api/meituan/list/recommend.json');
+  },
 };

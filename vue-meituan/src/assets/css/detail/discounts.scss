@@ -1,0 +1,121 @@
+.discounts-container{
+  margin-bottom: 40px;
+  h4{
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: bold;
+  }
+  .food-vouchers,
+  .vouchers{
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+    padding: 20px;
+    
+    .banner-content{
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    li{
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+      height: 100px;
+      border-bottom: 1px solid #e5e5e5;
+
+      &:last-child{
+        border: none;
+      }
+    }
+
+    .info{
+      margin-left: 20px;
+      flex: 1;
+      height: 100px;
+      .title{
+        color: #222;
+        cursor: pointer;
+        span{
+          vertical-align: middle;
+        }
+        .icon{
+          width: 16px;
+          vertical-align: middle;
+          margin-left: 10px;
+        }
+      }
+
+      .sale{
+        font-size: 12px;
+        color: #666;
+        margin-top: 5px;
+      }  
+      
+      .price{
+        margin-top: 30px;
+        span:first-child{
+          font-size: 14px;
+          color: #f60;
+        }
+        span:nth-child(2){
+          font-size: 30px;
+          color: #f60;
+        }
+        span:last-child{
+          font-size: 12px;
+          color: #666;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  .el-button{
+    background-color: #f60;
+    color: #fff;
+    border: none;
+  }
+
+  .food-vouchers{
+    .banner-content{
+      width: 100px;
+      height: 100px;
+      img{
+        border-radius: 10px;
+      }
+    }
+  }
+
+  .vouchers{
+    .banner-content{
+      width: 160px;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 0 20px;
+      background-image: url('https://s1.ax1x.com/2020/07/12/U3V429.png');
+      .price{
+        text-align: center;
+        padding: 20px 0 15px;
+        border-bottom: 1px dashed #ccc;
+        span{
+          color: #f60;
+          &:last-child{
+            font-size: 30px;
+          }
+          &:first-child{
+            font-size: 14px;
+          }
+        }
+      }
+
+      .desc{
+        text-align: center;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
